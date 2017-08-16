@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
+ 
 /*
     App
 */
@@ -11,7 +11,7 @@ var App = React.createClass({
         return (
             <div className="catch-of-the-day">
                 <div className="menu">
-                    <Header />
+                    <Header tagline="Fresh SeaFood Market"/>
                 </div>
                 <Order />
                 <Inventory />
@@ -27,7 +27,15 @@ var Header = React.createClass({
 
     render: function() {
         return (
-            <p>Header</p>
+            <header className="top">
+                <h1>Catch
+                <span className="ofThe">
+                <span className="of">of</span>
+                <span className="the">the</span>
+                </span>
+                day</h1>
+                <h3 className="tagline"><span>{this.props.tagline}</span></h3>
+            </header>
         )
     }
 })
